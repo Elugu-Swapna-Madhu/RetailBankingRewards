@@ -1,0 +1,16 @@
+create database RewardsBanking;
+
+use RewardsBanking;
+
+create table Rewards(
+   RewardId double,
+   CustomerId double,
+   RewardName varchar(20),
+   RewardCode varchar(10),
+   RewardStatus boolean,
+   RewardExpiryDate date,
+   RewardDescription varchar(50),
+   primary key (RewardId),
+   foreign key (CustomerId) references Transaction (CustomerId)
+   );
+   
